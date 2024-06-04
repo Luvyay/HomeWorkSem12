@@ -1,0 +1,64 @@
+.header {
+	width: 500px;
+	height: 30px;
+	margin: 0 auto;
+	padding: 0;
+	background: gray;
+}
+
+#navbar {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#navbar li {
+	display: inline-block;
+	margin: 5px 10px 5px 10px;
+}
+
+#navbar a {
+	text-decoration: none;
+	outline: none;
+}
+
+#navbar a:visited {
+	color: black;
+}
+
+.wrapper {
+	width: 488px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid gray;
+}
+
+.wrapper-row {
+	margin-bottom: 25px;
+}
+
+.form-label {
+	float: left;
+}
+
+.form-control {
+	float: right;
+	margin-right: 170px;
+}
+
+#wrapper-table {
+	width: 500px;
+}
+
+table {
+	margin: 0 auto;
+}
+
+table, tr, th, td {
+	border: 1px solid gray;
+}
+
+th, td {
+	width: 50px;
+	height: 30px;
+}

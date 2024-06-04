@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <title th:text="${book.nameBook}"></title>
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <ul id="navbar">
+                <li>
+                    <a href="/">Главная</a>
+                </li>
+                <li>
+                    <a href="/books">Все книги</a>
+                </li>
+                <li>
+                    <a href="/book-save">Сохранить книгу</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="placeNameBook">
+            <span th:text="'Название книги: ' + ${book.nameBook}"></span>
+        </div>
+        <div class="placePrice">
+            <span th:text="'Цена: ' + ${book.price}"></span>
+        </div>
+        <div class="placeDescription">
+            <span>Описание:</span>
+            <p th:text="${book.description}"></p>
+        </div>
+    </div>
+</body>
+</html>

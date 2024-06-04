@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <title>Сохранить книгу</title>
+</head>
+<body>
+<div class="header">
+    <div class="menu">
+        <ul id="navbar">
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            <li>
+                <a href="/books">Все книги</a>
+            </li>
+            <li>
+                <a href="/book-save">Сохранить книгу</a>
+            </li>
+        </ul>
+    </div>
+</div>
+  <div class="wrapper">
+    <form action="#" th:action="@{/book-save}" th:object="${book}" method="post">
+      <div class="wrapper-row">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-control" type="text" th:field="*{nameBook}" id="name" placeholder="name"><br/>
+      </div>
+      <div class="wrapper-row">
+        <label class="form-label" for="price">Price</label>
+        <input class="form-control" type="number" th:field="*{price}" id="price" placeholder="price"><br/>
+      </div>
+      <div class="wrapper-row">
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-control" th:field="*{description}" id="description" placeholder="description"></textarea><br/>
+      </div>
+      <input type="submit" value="Сохранить книгу">
+    </form>
+  </div>
+</body>
+</html>
